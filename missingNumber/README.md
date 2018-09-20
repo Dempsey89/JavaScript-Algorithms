@@ -1,6 +1,6 @@
 # Missing number Algorithm
 
-  This algorithm took in an array of numbers 0=9, except it was 
+  This algorithm took in an array of numbers 0-9, except it was 
   missing a random number and the numbers weren't in order. The
   challenge was to return what that missing number was.
   
