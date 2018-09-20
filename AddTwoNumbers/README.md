@@ -1,0 +1,2 @@
+# Add two numbers algorithm
+    This is a basic algorithm that adds any 2 numbers entered together. Solved by creating a function that takes two numbers as paramaters and then returning the sum of them.
