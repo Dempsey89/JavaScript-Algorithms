@@ -14,7 +14,7 @@
   
 ## Solution two
 
- Again created variabl the stored split value at each space,
+ Again created variable that stored the split value at each space,
  of string param into an array. This time I then created a variable
  object that sorted through that array and took two paramaters, and returned if 
  the length of the first param was greater than the length of the next. Making a new array
