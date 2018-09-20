@@ -1,0 +1,20 @@
+<h1>Sum digits from string</h1>
+
+
+<script>
+
+
+function sumDigits(str){
+    
+   let findNums, toNums; 
+   let getNums = str.split(' ').filter(findNums = (word) => { return parseInt(word); } ).map(toNums = (arr) => {return Number(arr); });
+   
+   return getNums.length === 0 ? 0 : getNums.reduce(addNum = (total, newNum) => { return total + newNum; });
+}
+
+    
+console.log(sumDigits('2 apples, 12 oranges'));
+console.log(sumDigits('123450'));
+console.log(sumDigits('Your payment method is invalid'));
+
+</script>

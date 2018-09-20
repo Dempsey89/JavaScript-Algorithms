@@ -1,0 +1,27 @@
+<h1>Duplicate</h1>
+
+
+<script>
+
+
+
+
+function isDuplicate(arr){
+    
+    arr.sort();
+    
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] === arr[i = 1]) {return true};
+    }
+    return false;
+}
+
+
+console.log(isDuplicate([1,2,3,2]));
+console.log(isDuplicate([3,1]));
+console.log(isDuplicate([0,4,5,0,3,6]));
+
+
+
+
+</script>

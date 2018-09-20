@@ -1,0 +1,27 @@
+<h1>Palindrome Algorithm</h1>
+<h3>Why isn't the word 'Palindrome' a palindrome?</h3>
+
+<script>
+
+function isPalindrome(str){
+    
+  let wordReversed = '';
+  let comparer = str.replace(/[^a-z0-9]/gi, '').toLocaleLowerCase();
+
+    
+    for (let i = comparer.length - 1; i >= 0; i--){
+            wordReversed += comparer[i];
+         }
+  return comparer === wordReversed;
+}
+
+    
+
+console.log(isPalindrome('A man, a plan, a canal.Panama'));
+console.log(isPalindrome('My age is 0, 0 si ega ym'));
+console.log(isPalindrome('_codegod'));
+console.log(isPalindrome('legendary'));
+console.log(isPalindrome('.0_0(:/-\:)0-0'));
+
+    
+</script>
