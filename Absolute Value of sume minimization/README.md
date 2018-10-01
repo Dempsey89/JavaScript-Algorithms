@@ -1,4 +1,4 @@
-#Absolute Value Sum Minization
+# Absolute Value Sum Minization
 	Here the objective was basically to get the median out of an array of numbers
 	To do this I created variable that stored a ternary. If the length of the
 	array was even, the variable would equal the length of the array divided by two
