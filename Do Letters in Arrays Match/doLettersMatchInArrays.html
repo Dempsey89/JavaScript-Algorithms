@@ -1,0 +1,28 @@
+<script>
+
+
+
+
+// algorithm to check if letters from one word in array are all in the other word
+function mutation(arr) {
+let ans;
+let word1 = arr[0].toLowerCase();
+let word2 = arr[1].toLowerCase().split('');
+
+for (let i = 0; i < word2.length; i++){
+	if(word1.includes(word2[i]))
+		{ ans = true }
+	else { ans = false; break; }
+
+}
+	return ans;
+}
+
+console.log(mutation(["hello", "hey"]));
+console.log(mutation(["hello", "HELLO"]));
+
+
+
+
+
+</script>

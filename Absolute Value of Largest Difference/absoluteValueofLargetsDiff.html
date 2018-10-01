@@ -1,0 +1,19 @@
+<script>
+
+	// Absolute value of  largest difference of array
+	function absoluteValue(arr){
+
+
+		let diff = Math.abs(arr[0] - arr[1]);
+
+		for (let i = 1; i < arr.length; arr++){
+			if ( Math.abs(arr[i] - arr[i + 1]) > diff ) { diff = Math.abs(arr[i] - arr[i + 1]) }
+		}
+
+		return diff;
+	}
+
+	console.log(absoluteValue([2,4,1,0]))
+
+
+</script>

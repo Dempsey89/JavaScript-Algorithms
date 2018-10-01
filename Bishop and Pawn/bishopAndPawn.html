@@ -1,0 +1,55 @@
+<script>
+
+
+		// Bishop and Pawn
+		function bishopPawn(val1,val2){
+
+			let chessKey = {
+				a:1,
+				b:2,
+				c:3,
+				d:4,
+				e:5,
+				f:6,
+				g:7,
+				h:8
+			}
+
+			let bishopX = chessKey[val1[0]];
+			let bishopY =parseInt(val1[1]);
+			let pawnX = chessKey[val2[0]];
+			let pawnY =parseInt(val2[1]);
+
+			
+
+			// Initial solution involved 3 if then statements-- saw better solution with Dylan Isral's tutorial
+			/*if (pawnX === bishopX){
+
+				return pawnY === bishopY ? true : false;
+
+			} else if (pawnX > bishopX) {
+
+				let distance = pawnX - bishopX;
+
+				return distance + bishopY === pawnY ? true : false;
+
+			} else {
+
+				let distance = bishopX - pawnX;
+
+				return distance + pawnY === bishopY ? true : false;
+
+			}*/
+
+
+			// one ternary can solve 
+			return bishopX + bishopY === pawnX + pawnY || bishopY + pawnX === bishopX + pawnY ? true : false
+
+
+		}
+
+
+		console.log(bishopPawn("b2", "c3"));
+
+
+</script>

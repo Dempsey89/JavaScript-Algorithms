@@ -1,0 +1,55 @@
+<script>
+
+
+
+
+
+
+	// Alternating Sums
+	function alternatingSums(arr){
+
+
+		// My initial solution -- does a lot of looping
+		/*let odds = [];
+		let evens = [];
+
+		for (let i = 0; i < arr.length; i++){
+			odds.push(arr[i]);
+			i++;
+			if(arr.length > i){
+				evens.push(arr[i]);
+			}
+		}
+		function sumTotal(numbers) {
+				return numbers.reduce((total,num) => {
+				return total + num;
+			});
+		}
+
+			return [sumTotal(odds), sumTotal(evens)];*/  
+
+
+		// Answer sgiven by Dylan Israel (except he used if then instead of ternary), cleaner and quicker. 
+		let odd = 0;
+		let even = 0;
+
+		arr.forEach((element, index) => {
+			 index % 2 === 0 ? odd += element : even += element;
+		})
+		return [odd, even];
+
+	}
+
+
+
+
+
+
+	console.log(alternatingSums([50,60,60,45,70]))
+
+
+
+
+
+
+</script>

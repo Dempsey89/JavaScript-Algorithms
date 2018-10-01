@@ -1,0 +1,40 @@
+<h1>Add up Digits</h1>
+
+
+
+
+<script>
+
+
+
+
+function addDigits(num){
+    let stringNum = num.toString().split('');
+    return stringNum.reduce((str1,str2) =>{
+        return parseInt(str1) + parseInt(str2);
+    });
+}
+
+
+
+
+
+console.log(addDigits(29));
+console.log(addDigits(48));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,30 @@
+<script>
+
+
+
+		function avoidObstacles(arr){
+
+				// Tough one-- resdorted to Dylan Israels answer
+
+				// sort array so that I can get highest value easier-- then store highest value in variable
+				const marks = arr.sort();
+				const highestMark = marks[marks.length - 1];
+
+				// loop through the newly sorted array up to the highest value-- start at one to avoid infinite loop
+				for (let i = 1; i < highestMark; i++){
+					// Check if the current index is not divisible by every value in the newly sorted array -- why we had to start at one
+					if (marks.every( (val) => val % i !== 0)){
+						return i;
+					}
+				}
+
+					// if index isn't divisible by every item in the array, it will be able to "jump" over each value
+
+		}
+
+
+		console.log(avoidObstacles([5,3,6,7,9]))
+
+
+
+</script>

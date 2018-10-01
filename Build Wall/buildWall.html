@@ -1,0 +1,37 @@
+<script>
+
+
+
+// Build Wall 
+let picture = ["abc",
+       "def"];
+
+
+
+ function addBorder(arr){
+ 	
+ 	let stars ="***";
+ 	let star = '*';
+ 	let ans = arr;
+ 	ans.push(stars);
+ 	ans.unshift(stars);
+
+
+ 	return ans.map((arg) =>{
+ 		return star + arg + star;
+ 	})
+
+
+ 	
+
+ }
+ console.log(addBorder(picture));
+
+
+
+
+
+
+
+
+</script>

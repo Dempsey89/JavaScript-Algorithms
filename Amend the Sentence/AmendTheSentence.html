@@ -1,0 +1,23 @@
+<h1>Amend the sentence</h1>
+
+
+<script>
+
+
+
+function ammendSentence(str){
+    
+    let newStr = str.split(/(?<=[a-z])(?=[A-Z])/);
+    return newStr.join(' ').toLowerCase();
+    
+}
+
+
+console.log(ammendSentence('ThisIsJustTestingTheCode'));
+
+
+
+
+
+
+</script>

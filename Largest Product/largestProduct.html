@@ -1,0 +1,35 @@
+<script>
+
+// Largest product
+
+function largestProduct(arr){
+
+	//let ans = [];
+
+	// For situations that all products are negative
+	let final = arr[0] * arr[1];
+
+	/*for (let i = 0; i < arr.length - 1; i++){
+		ans.push(arr[i] * arr[i + 1]);
+	}
+
+	for (let i = 0; i < ans.length; i++){
+		if(ans[i] > final){ final = ans[i] };
+	}*/
+
+
+	// Only loops once, no need for array variable to push values into -- solution seen on Dylan Israel's Udemy course -- 
+	for (let i = 0; i < arr.length - 1; i++){
+		let largest = arr[i] * arr[i + 1];
+
+		final = final < largest ? final = largest : final;
+	}
+
+	return final;
+}
+
+console.log(largestProduct([3,6,-2,-5,7,3]));
+
+
+
+</script>

@@ -1,0 +1,26 @@
+<script>
+
+
+
+
+	// Is string in alphabetic order
+
+	function isAlphabetic(str){
+
+		for (let i = 0; i < str.length; i++){
+			if (str.charCodeAt(i) <= str.charCodeAt(i-1)) {return false};
+		}
+		return true;
+	}
+
+
+	console.log(isAlphabetic("effg"));
+
+	console.log(isAlphabetic("ace"));
+
+
+
+
+
+
+</script>

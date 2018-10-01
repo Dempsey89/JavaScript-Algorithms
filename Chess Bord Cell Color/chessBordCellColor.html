@@ -1,0 +1,31 @@
+<script>
+
+
+
+	// Chess board cell color
+
+	function chessBordCellColor(p1,p2){
+
+		let chessKey = {
+			a:1,
+			b:2,
+			c:3,
+			d:4,
+			e:5,
+			f:6,
+			g:7,
+			h:8
+		}
+
+		pieceOne = (parseInt(p1[1]) + chessKey[p1[0]]) % 2;
+		pieceTwo = (parseInt(p2[1]) + chessKey[p2[0]]) % 2;
+
+			return pieceOne === pieceTwo;
+
+	}
+
+	console.log(chessBordCellColor('a1','h3'));
+
+
+
+</script>

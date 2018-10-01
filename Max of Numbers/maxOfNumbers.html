@@ -1,0 +1,22 @@
+<script>
+
+
+	// Max sum of 'k' amount of consecutive numbers
+
+	function maxSum(arr,num){
+		
+		let ans = 0;
+
+		for (let i = 0; i < arr.length; i++){
+			for (let x = 1; x < num; x++){
+				if (arr[i] + arr[i + x] > ans) {ans = arr[i] + arr[i + x]};
+			}
+		}
+		return ans;
+
+	}
+
+
+	console.log(maxSum([2,3,5,1,6], 2));
+
+</script>

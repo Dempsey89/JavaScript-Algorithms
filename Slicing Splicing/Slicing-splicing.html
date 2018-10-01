@@ -1,0 +1,18 @@
+
+
+<script>
+// Splicing / Slicing algorithm
+
+
+function frankenSplice(arr1, arr2, n) {
+  let slicedParam = arr2.slice(0, n);
+  let slicedParaPartTwo = arr2.splice(n);
+  
+  return slicedParam.concat(arr1).concat(slicedParaPartTwo);
+  
+}
+
+console.log(frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2));
+    
+    
+</script>

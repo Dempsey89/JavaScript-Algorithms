@@ -1,0 +1,23 @@
+<script>
+
+
+// Get index of number added to array after it is sorted
+function getIndexToIns(arr, num) {
+
+arr.push(num);
+let ans;
+let sortedArr = arr.sort((a, b) => {return a - b});
+
+
+for (let i = 0; i < sortedArr.length; i++){
+	if (sortedArr[i] === num) { ans = i; break;}
+}
+	return ans;
+
+
+}
+
+console.log(getIndexToIns([3, 10, 5], 13) );
+
+
+</script>

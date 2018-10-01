@@ -1,0 +1,26 @@
+<script>
+
+
+	// Array previous less
+	function prevLess(arr){
+
+		let ans = [];
+		
+		// loop through array from back to front
+		for (let i = arr.length - 1; i >= 0; i--){
+
+			// loop through array backwards again from point current iteration of loop is at 	
+			for (let x = i; x >= 0; x--){
+
+				// add value to array variable that will be returned if a valie of second iteration is less than value of initial iteration -- 
+				if (arr[i] > arr[x]) { ans.unshift(arr[x]); break; }
+				// if no values in second iteration is less than value of current iteration by the time the second loop gets to 0 in length, add '-1' to array variable
+				else if (x === 0) { ans.unshift(-1) }
+			}
+		}
+		return ans;
+	}
+
+	console.log(prevLess([3,5,2,4,5]))
+
+</script>

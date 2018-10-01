@@ -1,0 +1,35 @@
+<script>
+
+
+
+// Chunk array into groups of arrays
+function chunkArrayInGroups(arr, size) {
+
+let ans = arr.slice(0, size);
+let remaining = arr.slice(size, arr.length);
+let theAns =[ans];
+
+for (let i =0; i < remaining.length; i++){
+
+	theAns.push(remaining.slice(0, size));
+	remaining = remaining.slice(size, remaining.length);
+
+	if(remaining.length < size && remaining.length > 0){
+		theAns.push(remaining);
+	}
+	
+}
+return theAns;
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4));
+
+
+
+
+
+
+</script>

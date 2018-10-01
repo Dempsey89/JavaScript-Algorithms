@@ -1,0 +1,23 @@
+<script>
+
+
+	// Array of largest strings from another array
+
+	function largestStrings(arr){
+
+		let largestStrAmount = 0;
+
+		for (let i = 0; i < arr.length; i++){
+			largestStrAmount = largestStrAmount < arr[i].length ? largestStrAmount = arr[i].length : largestStrAmount;
+		}
+		return arr.filter((str) => {
+			return str.length === largestStrAmount;
+		});
+
+	}
+
+	console.log(largestStrings(['aba', 'aa', 'ad', 'vcd', 'aba']));
+
+
+
+</script>

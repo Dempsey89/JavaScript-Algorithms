@@ -1,0 +1,20 @@
+<script>
+
+
+
+// Add 2 digits
+
+function addTwoDigits(num){
+
+	let splitDigits = num.toString().split('');
+	return splitDigits.reduce( (ans, digit) => { return parseInt(ans) + parseInt(digit); } )
+}
+
+console.log(addTwoDigits(29));
+
+
+
+
+
+
+</script>

@@ -1,0 +1,28 @@
+<script>
+
+// Next letter in alphabet
+
+function nextLetter(str){
+	let toArr= [];
+
+	for (let i = 0; i < str.length; i++){
+		toArr.push(str.charCodeAt(i));
+	}
+	let charNums = toArr.map((nums) => {
+		return nums === 122 ? 97 : nums + 1;
+	});
+	let toString = charNums.map((nums) =>{
+		return String.fromCharCode(nums);
+	});
+	return toString.join('');
+}
+
+
+
+
+console.log(nextLetter('crazy'));
+
+
+
+
+</script>

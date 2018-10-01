@@ -1,0 +1,23 @@
+<script>
+
+
+	// Are arms equally strong
+	function areEquallyStrong(yourLeft, yourRight, friendsLeft, FriendsRight){
+
+		let yourStrongest = yourLeft > yourRight ? yourLeft : yourRight;
+		let yourWeakest = yourLeft < yourRight ? yourLeft : yourRight;
+
+		let friendsStrongest = friendsLeft > FriendsRight ? friendsLeft : FriendsRight;
+		let friendsWeakest = friendsLeft < FriendsRight ? friendsLeft : FriendsRight;
+
+		return yourStrongest === friendsStrongest && yourWeakest === friendsWeakest;
+
+	}
+
+	console.log(areEquallyStrong(10,15,15,10));
+	console.log(areEquallyStrong(15,10,15,10));
+	console.log(areEquallyStrong(15,10,15,9));
+
+
+
+</script>

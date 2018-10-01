@@ -1,0 +1,40 @@
+<script>
+
+
+	// Array Change
+
+	function arryChange(arr){
+
+		let ans = 0;
+
+
+
+		// My initial solution envolves looping through array length and then looping within each
+		for (let i = 0; i < arr.length; i++){
+			
+
+			// My initial solution envolves looping through array length and then looping within each
+
+			//while (arr[i] >= arr[i + 1]) {
+			//	arr[i + 1]++;
+			//	ans++;
+
+			// Example by Dylan Israel uses if statement to see if next value in array is bigger than current, and if so it will store the difference of the current value plus one, minus the next value in the array into a variable. That variable gets added to the final ans, and the next value gets updated to one more than the current value... I find it better because it has less times the function has to loop through data
+			if (arr[i] >= arr[i + 1]){
+			const diff = (arr[i] + 1) - arr[i + 1];
+			arr[i + 1] = arr[i] + 1;
+			ans += diff;
+		}
+
+			} 
+
+		 
+
+		return ans;
+
+	}
+
+	console.log(arryChange([1,1,1]));
+	console.log(arryChange([2,1,1]));
+
+</script>

@@ -1,0 +1,20 @@
+<script>
+
+	// Character parity
+	function charecterParity(str){
+
+		toNum = parseInt(str);
+
+		if (isNaN(toNum)) {
+			return toNum
+		} else {
+			return toNum % 2 === 0 ? "Even" : "Odd";
+			}
+	}
+
+	console.log(charecterParity('5'));
+	console.log(charecterParity('8'));
+	console.log(charecterParity('q'));
+
+
+</script>
