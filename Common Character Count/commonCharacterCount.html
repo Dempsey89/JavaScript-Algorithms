@@ -1,0 +1,37 @@
+<script>
+
+
+
+
+// Common Character Count
+        function commonCharacterCount(str1,str2){
+                let count = 0;
+                let chars = str1.split('');
+                let chars2 = str2.split('');
+
+
+                for (let i = 0; i < str2.length; i++){
+
+                        for(let x = 0; x < str1.length; x++){ 
+                                if (chars[x] === chars2[i]) { count += 1; chars.splice(x,1); }
+                        }
+                }
+                return count;
+        }
+
+        console.log(commonCharacterCount('aabcc', 'adcaa'));
+        console.log(commonCharacterCount('aabccd', 'adcaa'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
