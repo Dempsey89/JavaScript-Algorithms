@@ -1,0 +1,35 @@
+<script>
+
+
+
+       // Contains close nums
+
+        function containsCloseNums(arr,num){
+
+                let stor = [];
+                let dup = [];
+
+                arr.forEach((el, ind) =>{
+                        if (stor.indexOf(el) === -1){
+                                stor.push(el);
+                        }
+                        else{
+                                dup.push(stor.indexOf(el), ind);
+                        }
+                });
+
+                 return num >= dup[1] - dup[0];
+
+
+        }
+
+
+        console.log(containsCloseNums([0,1,2,3,5,2], 3));
+        console.log(containsCloseNums([0,1,2,3,5,2], 2));
+
+
+
+
+
+
+</script>

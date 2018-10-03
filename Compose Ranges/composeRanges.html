@@ -1,0 +1,61 @@
+<script>
+
+
+
+       // Compose Ranges
+        function composeRanges(arr){
+
+
+
+                // My initial solution looped so many times
+                /*let storageLess = [];
+                let storageGreater = [];
+
+                for (let i = 0; i < arr.length; i++){
+                        if( (arr[i] - 1) !== arr[i - 1]) { storageLess.push(arr[i]) }
+                        if ((arr[i] + 1) !== arr[i + 1]) { storageGreater.push(arr[i]) }
+                } 
+
+                let finalArr = [];
+
+                for (let i = 0; i < storageLess.length; i++){
+                        finalArr.push([storageLess[i], storageGreater[i]] );
+                } 
+
+                return finalArr.map((val) => {
+                        return  val[0] === val[1] ? val[0].toString() : "" + val[0].toString() + "->" + val[1].toString()
+                }); */
+         
+
+                // Solution seen from Dylan Israel's udemy course
+
+                let vals = [{start: arr[0], end: arr[0]}];
+
+                for (i = 1; i < arr.length; i++){
+                        if (vals[vals.length - 1].end + 1 === arr[i]){
+                                vals[vals.length - 1].end = arr[i];
+                        } else {
+                                vals.push({start: arr[i], end: arr[i]});
+                        }
+                }
+
+                for (i = 0; i < vals.length; i++){
+                        if (vals[i].start !== vals[i].end){
+                                vals[i] = `${vals[i].start}->${vals[i].end}`;
+                        } else{
+                                vals[i] = vals[i].start.toString();
+                        }
+                };
+                        return vals;
+        }
+
+        console.log(composeRanges([-1,0,1,2,6,7,9]));
+
+
+
+
+
+
+
+
+</script>
