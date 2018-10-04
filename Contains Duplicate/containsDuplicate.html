@@ -1,0 +1,30 @@
+<script>
+
+
+
+
+
+
+// Contains Duplicate
+function containsDuplicate(arr){
+    
+   let stor = [];
+   let ans = false;
+    
+    arr.forEach((num) => {
+        
+      stor.indexOf(num) === -1 ? stor.push(num) : ans = true;
+       
+    })
+    return ans;
+}
+
+console.log(containsDuplicate([1,2,3,1]));
+console.log(containsDuplicate([3,1]));
+
+
+
+
+
+
+</script>

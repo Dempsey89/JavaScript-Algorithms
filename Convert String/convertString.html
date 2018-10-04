@@ -1,0 +1,32 @@
+<script>
+
+
+
+// Convert String
+function converString(str1, str2){
+    
+    let array = str2.split('');
+    let array2 = str1.split('');
+    
+    for (let i = 0; i < array.length; i++){
+        
+        if (array2.indexOf(array[i]) === -1){
+            return false;
+        } else{
+        array2 = array2.slice(array2.indexOf(array[i]) + 1);
+        }
+    }
+    
+    return true;
+}
+
+console.log(converString('ceoydefthfSiyg5h5yts', 'codefights'));
+console.log(converString('addbyca', 'abcd'));    
+
+
+
+
+
+
+
+</script>

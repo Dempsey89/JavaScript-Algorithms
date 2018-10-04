@@ -1,0 +1,30 @@
+<script>
+
+
+
+
+// Crossing Sum
+function crossingSum(arr,a,b){
+    
+    let aRow = 0;
+    let bCol = 0;
+    
+    for (let i = 0; i < arr[a].length; i++){
+        if(i !== b) {
+           aRow += arr[a][i];
+           }
+    }
+    
+    for (let i = 0; i < arr.length; i++){
+        bCol += arr[i][b];
+    } 
+    
+    return aRow + bCol;
+    
+}
+console.log(crossingSum([[1,1,1,1],[2,2,2,2],[3,3,3,3]],1,3));
+
+
+
+
+</script>
