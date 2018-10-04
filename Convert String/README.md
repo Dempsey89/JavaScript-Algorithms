@@ -1,4 +1,4 @@
-# Conver Strings
+# Convert Strings
 	This challenge was to take in two strings, and return
 	whether you could make the first equal the second by 
 	removing letters from it. I solved by setting each string
