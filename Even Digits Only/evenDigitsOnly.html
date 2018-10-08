@@ -1,0 +1,34 @@
+<script>
+
+
+
+
+function evenDigitsOnly(num){
+    
+    let numArr = num.toString().split('');
+    
+    /*for (let i = 0; i < numArr.length; i++){
+        if ( parseInt(numArr[i]) % 2 !== 0 ){
+            return false;
+        }
+
+    }
+    
+    return true;*/
+    
+    // Using every method
+    return numArr.every((dig) => parseInt(dig) % 2 === 0);
+}
+
+
+
+console.log(evenDigitsOnly(246822));
+console.log(evenDigitsOnly(642386));
+
+
+
+
+
+
+
+</script>

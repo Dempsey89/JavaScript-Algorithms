@@ -1,0 +1,24 @@
+<script>
+
+
+function fermactor(num){
+  
+    for (let i = 1; i < num; i++){
+        for (let j = 1; j < i; j++){
+            
+            let tot = i ** 2 - j ** 2;
+            if (tot === num){
+                return [i,j];
+            }
+        }
+    }
+}
+
+
+console.log(fermactor(15));
+
+
+
+
+
+</script>

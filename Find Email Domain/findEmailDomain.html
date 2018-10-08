@@ -1,0 +1,24 @@
+<script>
+
+
+
+
+
+function findValidEmail(str){
+    
+    let lastAt = str.lastIndexOf('@'); 
+    return str.slice(lastAt + 1);
+}
+
+
+
+
+console.log(findValidEmail('prettyandsimple@example.com'));
+console.log(findValidEmail('[][?>@999?>]]@example.com'));
+
+
+
+
+
+
+</script>
