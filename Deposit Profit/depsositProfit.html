@@ -1,0 +1,44 @@
+<script>
+
+
+
+
+
+// deposit profit
+function depositProfit(dep, tax, total){
+
+        let year = 0;
+        let deposit = dep;
+
+        /*for (let i = 0; deposit < total; i++){
+                deposit += (deposit * (tax / 100));
+                year += 1;
+        }*/
+
+
+        // Better with while loop
+        while(total > deposit){
+                deposit += (deposit * (tax / 100));
+                year += 1;
+        }
+
+        return year;
+}
+
+console.log(depositProfit(100,20,170))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

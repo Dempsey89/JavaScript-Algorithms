@@ -1,0 +1,39 @@
+<script>
+
+
+// Domain Type
+function domainType(arr){
+
+        let domains = [];
+
+        for (let i = 0; i < arr.length; i++){
+
+                let sep = arr[i].split('.');
+                let types = sep[sep.length - 1];
+
+
+                if ( types === 'org'){
+                        domains.push('organization');
+                } else if (types === 'com' ){
+                        domains.push('commercial');
+                } else if ( types === 'net' ){
+                        domains.push('network');
+                } else if ( types === 'info' ){
+                        domains.push('information');
+                }
+        }
+
+        return domains;
+
+}
+
+console.log(domainType(['en.wiki.org','codefights.com','happy.net','code.info']));
+
+
+
+
+
+
+
+
+</script>

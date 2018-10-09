@@ -1,0 +1,44 @@
+<script>
+
+
+
+// First not repeating character
+function firstNotRepeating(str){
+
+let findDup = {};
+
+let toArr = str.split('');
+
+for (let char of toArr){
+        if (findDup.hasOwnProperty(char)){
+                delete findDup[char];
+        }
+        else {
+                findDup[char] = char;
+        }
+}
+
+return Object.keys(findDup)[0] === undefined ? '_' : Object.keys(findDup)[0];
+
+}
+
+
+console.log(firstNotRepeating('abacabad'));
+console.log(firstNotRepeating('abacabaabacaba'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

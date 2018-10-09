@@ -1,0 +1,45 @@
+<script>
+
+
+
+
+// Different symbols
+function differentSymbols(str){
+
+       /* let arr = str.split(''); 
+        let letterCount = 0;
+        let stor = [];
+
+        for (let i = 0; i < arr.length; i++){
+                if (stor.indexOf(arr[i]) === -1) {
+                        stor.push(arr[i]);
+                        letterCount += 1;
+                }
+        }
+
+        return letterCount; */ 
+
+        // return using 'Set" method'
+
+        let uniqueLetters = new Set();
+        let allLetters = str.split('');
+
+        allLetters.forEach((let) =>{
+                uniqueLetters.add(let);
+        });
+        return uniqueLetters.size;
+}
+
+
+
+
+
+
+console.log(differentSymbols('cabca'));
+
+
+
+
+
+
+</script>
