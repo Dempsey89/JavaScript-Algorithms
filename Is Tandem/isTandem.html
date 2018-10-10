@@ -1,0 +1,29 @@
+<script>
+
+
+
+// Is Tandem
+function isTandem(str){
+
+        if(str.length % 2 !== 0){
+                return false;
+        }
+
+
+        let halfway = str.length / 2;
+        let firstHalf = str.slice(halfway);
+        let secondHalf = str.slice(halfway, str.length)
+        return firstHalf === secondHalf;
+
+}
+
+
+console.log(isTandem('tandemtandem'));
+console.log(isTandem('ppp'));
+console.log(isTandem('2w2ww'));
+
+
+
+
+
+</script>
