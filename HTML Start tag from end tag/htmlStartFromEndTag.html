@@ -1,0 +1,31 @@
+<script>
+
+
+
+// HTML Start tag from end tag
+function htmlTag(str){
+
+        let tagStrings = str.split(' ');
+        let tag = tagStrings[0].split('');
+        if(tag[tag.length - 1] !== '>' ){
+                tag.push('>');
+        }
+        tag.splice(1,0,'/');
+        return tag.join('');
+
+
+}
+
+
+console.log(htmlTag("<button type = 'button' disabled>"));
+console.log(htmlTag("<i>"));
+
+
+
+
+
+
+
+
+
+</script>

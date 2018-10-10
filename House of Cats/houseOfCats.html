@@ -1,0 +1,33 @@
+<script>
+
+
+
+
+// House of Cats
+function houseOfCats(num){
+
+        possiblePeople = [num / 2];
+
+        while (num > 4){
+                num -= 4;
+                possiblePeople.unshift(num / 2);
+                } 
+
+return possiblePeople;
+
+}
+
+console.log(houseOfCats(6));
+console.log(houseOfCats(2));
+
+
+
+
+
+
+
+
+
+
+
+</script>

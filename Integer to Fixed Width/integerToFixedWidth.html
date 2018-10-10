@@ -1,0 +1,46 @@
+<script>
+
+
+
+
+// Integer to fixed width
+function intergerToFixedWidth(num,width){
+
+
+        let str = num.toString().split('');
+
+        if (str.length === width){
+
+                return str.join('');
+
+        } else if (str.length < width){
+
+                while (str.length < width){
+                        str.unshift('0');
+                }
+
+                return str.join('');
+
+        } else {
+
+                str = str.slice(width);
+                return str.join('');
+        }
+
+
+}
+
+console.log(intergerToFixedWidth(1234,2));
+console.log(intergerToFixedWidth(1234,4));
+console.log(intergerToFixedWidth(1234,5));
+
+
+
+
+
+
+
+
+
+
+</script>

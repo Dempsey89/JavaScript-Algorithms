@@ -1,0 +1,54 @@
+<script>
+
+
+
+
+
+// Growing Plant
+function growingPlant(growth,shrink,desired){
+
+        let days = 0;
+        let height = 0;
+
+        /*for (let i = 0; i < desired; i++){
+                days++;
+                height += growth;
+
+                if (height >= desired){
+                        return days;
+                } else{
+                        height -= shrink;
+                }
+
+        }*/ 
+
+        // While Loop makes more sense
+        while(height < desired){
+                days++;
+                height += growth;
+
+                if (height >= desired){
+                        return days;
+                } else{
+                        height -= shrink;
+                }
+        }
+
+
+}
+
+console.log(growingPlant(100,10,910))
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
