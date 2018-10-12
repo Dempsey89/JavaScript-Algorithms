@@ -1,0 +1,31 @@
+<script>
+
+
+
+// Late Ride
+function lateRide(min){
+
+
+        let digits = (Math.floor((min / 60)).toString() + (min % 60).toString()).split('');
+
+        return digits.reduce((total,num) => {
+                return parseInt(total) + parseInt(num);
+        });
+
+
+}
+
+
+console.log(lateRide(240));
+console.log(lateRide(808));
+
+
+
+
+
+
+
+
+
+
+</script>
