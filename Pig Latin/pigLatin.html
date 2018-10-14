@@ -1,0 +1,39 @@
+<script>
+
+
+
+
+// Pig Late
+function pigLatin(str){
+
+
+let vowels = {
+        "a": 0,
+        "e": 1,
+        "i": 2,
+        "o": 3,
+        "u": 4
+}
+
+if (vowels.hasOwnProperty(str[0])){
+        return str + "way";
+}
+
+for ( let i = 1; i < str.length; i++){
+        if ( vowels.hasOwnProperty(str[i]) ){
+                return str.slice(i) + str.slice(0,i) + "ay";
+        }
+}
+
+
+}
+
+console.log(pigLatin("glove"));
+console.log(pigLatin("eight"));
+
+
+
+
+
+
+</script>

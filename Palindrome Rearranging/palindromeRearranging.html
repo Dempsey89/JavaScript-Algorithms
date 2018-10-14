@@ -1,0 +1,43 @@
+<script>
+
+
+
+
+
+// Palindrome Rearranging
+function palindromeRearranging(str){
+
+let splitStr = str.split('');
+let obj = {};
+let count = 0;
+
+for (let i = 0; i < splitStr.length; i++){
+        if(obj.hasOwnProperty(splitStr[i])) {
+                obj[splitStr[i]]++;
+        } else {
+                obj[splitStr[i]] = 1;
+        }
+}
+
+for ( let keys in obj){
+        if (obj[keys] % 2 !== 0){
+
+                count++;
+        }
+} r
+return count > 1 ? false : true;
+
+}
+
+
+console.log(palindromeRearranging("aabb"));
+
+
+
+
+
+
+
+
+
+</script>

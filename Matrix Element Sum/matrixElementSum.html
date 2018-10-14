@@ -1,0 +1,66 @@
+<script>
+
+
+
+
+// Matrix Element Sum
+function matrixElementSum(arr){
+
+        let available = [];
+        let floor= [];
+        let total = 0;
+
+
+        for(let i = 0; i < arr.length; i++){
+                for(let j = 0; j < arr[i].length; j++){
+
+                        if(i > 0){
+
+                                if (arr[i][j] === 0 || available[i - 1][j] === 'x'){
+                                floor.push('x');
+                                } else {
+                                floor.push(arr[i][j]);
+                                total += arr[i][j];
+                                }
+
+                        } else{
+
+                                if (arr[i][j] === 0){
+                                floor.push('x');
+                                } else {
+                                floor.push(arr[i][j]);
+                                total += arr[i][j];
+                                }
+
+                        }
+
+
+                }
+                available.push(floor);
+                floor = [];
+        }
+                return total;
+}
+
+
+
+console.log(matrixElementSum([
+        [0,1,1,2],
+        [6,5,0,0],
+        [2,0,3,3]
+        ]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

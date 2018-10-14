@@ -1,0 +1,26 @@
+<script>
+
+
+// Pages numbers
+function pagesNumber(page,ink){
+
+let count = 0;
+
+while (count < ink){
+        count += page.toString().length;
+        if (count + (page + 1).toString().length > ink){
+                return page;
+        }
+        page++;
+}
+
+}
+
+
+console.log(pagesNumber(122,6));
+
+
+
+
+
+</script>
