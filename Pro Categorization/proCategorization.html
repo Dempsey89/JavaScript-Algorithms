@@ -1,0 +1,48 @@
+<script>
+
+
+
+// Pro Categorization
+function proCategorization(names,professions){
+    
+ let possibleProfessions = []; 
+ let objHolder = [];
+
+    
+    
+ for (let i = 0; i < professions.length; i++){
+     for (let j = 0; j < professions[i].length; j++){
+         if(!objHolder.includes(professions[i][j])){
+             possibleProfessions.push(professions[i][j]);
+         }
+         objHolder.push(professions[i][j]);
+
+     }
+ }
+
+     possibleProfessions.sort();
+     let peopleWhoDo = [];
+     let peep = [];
+    
+     for (let i = 0; i < possibleProfessions.length; i++){
+         for (let j = 0; j < names.length; j++){
+             if (professions[j].includes(possibleProfessions[i])){
+                 peep.push(names[j]);
+             }
+         }
+         peopleWhoDo.push([[possibleProfessions[i]], peep]);
+         peep = [];
+     }
+    return peopleWhoDo;
+}
+
+
+console.log(proCategorization(["Jack","Leon","Maria"], [["Computer repair", "Handyman", "House cleaning"], ["Computer lessons", "Computer repair","Data recovery service"], ["Computer lessons", "House cleaning"]]))
+
+
+
+
+
+
+
+</script>

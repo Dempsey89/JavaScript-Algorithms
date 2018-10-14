@@ -1,0 +1,37 @@
+<script>
+
+
+
+
+// Rating Threshold
+function ratingThreshold(ratings){
+    
+    
+    let reviewNeeded = [];
+    
+    for (let i = 0; i < ratings.length; i++){
+        
+        if ( (ratings[i].reduce((total, num) => {
+            return total + num;
+        }) / ratings[i].length) < 3.5){
+          reviewNeeded.push(i);  
+        }
+        
+    }
+    
+    return reviewNeeded;
+}
+
+
+
+console.log(ratingThreshold([[3,4],[3,3,4],[4]]));
+
+
+
+
+
+
+
+
+
+</script>
