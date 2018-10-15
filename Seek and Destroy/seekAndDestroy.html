@@ -1,0 +1,48 @@
+<script>
+
+
+
+
+// Seek and Destroy
+function seekAndDestroy(arr1,arr2){
+
+        let destroy = [];
+        let objArr = {arr2};
+        for (let num of arr2){
+                objArr[num] = num;
+        }
+
+        
+        // First solution
+        /*for (let i = 0; i < arr1.length; i++){
+                if (!arr2.includes(arr1[i])){
+                        destroy.push(arr1[i]);
+                }
+        }*/
+
+
+        for (let num of arr1){
+                if (!objArr.hasOwnProperty(num)){
+                        destroy.push(num);
+                }
+        }
+
+
+                return destroy;
+
+
+
+}
+
+
+console.log(seekAndDestroy([3,5,1,2,2],[2,3,5]));
+console.log(seekAndDestroy([1,2,3,5,1,2],[2,3]));
+
+
+
+
+
+
+
+
+</script>
