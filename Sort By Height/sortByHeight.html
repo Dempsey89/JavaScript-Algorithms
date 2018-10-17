@@ -1,0 +1,33 @@
+<script>
+
+
+
+// Sort by Height
+function sortByHeight(arr){
+    
+
+let compareArr = arr.filter(num =>
+ num > -1).sort((a,b) => a - b);
+    
+
+    let ind = 0;
+
+    for (let i = 0; i < arr.length; i++){
+        if(arr[i] !== -1){
+            arr[i] = compareArr[ind];
+            ind++;
+        }
+    }
+    return arr;
+}
+
+
+
+console.log(sortByHeight([-1,150,190,170,-1,-1,180,190]))
+
+
+
+
+
+
+</script>

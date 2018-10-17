@@ -1,0 +1,46 @@
+<script>
+
+
+
+function stringConstruction(a,b){
+    
+    let objA = findChars(a);
+    let objB = findChars(b);
+    
+    let compare = []; 
+    
+    for (let char in objA){
+        if(objB.hasOwnProperty(char)){
+            compare.push(Math.floor(objB[char] / objA[char]));
+        } else {
+            return 0;
+        }
+    }
+    
+    return Math.min(...compare);
+
+}
+
+
+    
+function findChars(str){
+    let arr = str.split('');
+    let obj = {};
+    
+    for (i = 0; i < arr.length; i++){
+        if (obj.hasOwnProperty(arr[i])){
+            obj[arr[i]]++;
+        } else {
+            obj[arr[i]] = 1;
+        }
+    }
+    return obj;
+}
+
+console.log(stringConstruction("abc", "abccba"));
+
+
+
+
+
+</script>
