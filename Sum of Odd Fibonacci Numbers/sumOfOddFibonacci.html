@@ -1,0 +1,37 @@
+<script>
+
+
+
+
+function sumOfOddFibonacci(num){
+    
+    let fib = 1;
+    let fibanacci = [0];
+    let oddFibs = [];
+    
+    let i = 0;
+    while (fib < num){
+        fibanacci.push(fib);
+        if (fib % 2 !== 0){
+         oddFibs.push(fib);   
+        }
+        fib += fibanacci[i];
+        i++;
+    }
+    
+    return oddFibs.reduce((a,b) => {return a + b});
+}
+
+
+console.log(sumOfOddFibonacci(10));
+console.log(sumOfOddFibonacci(1000));
+console.log(sumOfOddFibonacci(4000000));
+
+
+
+
+
+
+
+
+</script>

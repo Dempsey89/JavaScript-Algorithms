@@ -1,0 +1,34 @@
+<script>
+
+
+
+
+function sumOfPrime(num){
+   
+    
+   let total = 0;
+   let primes = [];
+
+  
+
+    for (let i = 2; i <= num; i++){
+        if( !primes.map((a) => {return i % a}).includes(0) ){
+            total += i;
+            primes.push(i);
+        }
+    }
+    
+    return total;
+    
+}
+
+
+console.log(sumOfPrime(10));
+console.log(sumOfPrime(977));
+
+
+
+
+
+
+</script>

@@ -1,0 +1,45 @@
+<script>
+
+
+
+function squareDigitsSequence(num){
+    
+    let arrCheck = [num];
+    
+    let newNum = num.toString().split('').map((a) => {
+        return parseInt(a)**2;
+    }).reduce((num1,num2) => {
+        return num1 + num2;
+    });
+    
+    while (true){
+
+        if (arrCheck.includes(newNum)){
+            return arrCheck.length + 1;
+        } else {
+            arrCheck.push(newNum);
+
+            newNum = newNum.toString().split('').map((a) => {
+                return parseInt(a)**2;
+            }).reduce((num1,num2) => {
+                return num1 + num2;
+            });
+        }
+        
+    }
+
+}
+
+
+
+
+console.log(squareDigitsSequence(16));
+console.log(squareDigitsSequence(103));
+
+
+
+
+
+
+
+</script>
