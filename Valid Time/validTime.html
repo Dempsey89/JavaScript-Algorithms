@@ -1,0 +1,29 @@
+<script>
+
+
+// Valid Time
+function validTime(time){
+
+const timeArr = time.split(':');
+const hours = parseInt(timeArr[0]);
+const minutes = parseInt(timeArr[1]);
+
+return hours < 24 && minutes < 60 && hours >=0 && minutes >= 0;
+
+}
+
+console.log(validTime("13:58"));
+console.log(validTime("25:51"));
+console.log(validTime("02:76"));
+
+
+
+
+
+
+
+
+
+
+
+</script>

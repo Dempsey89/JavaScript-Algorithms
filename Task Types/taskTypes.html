@@ -1,0 +1,34 @@
+<script>
+
+
+// Task Types
+function taskTypes(dueDates,currentDay){
+
+
+        let today = 0;
+        let thisWeek = 0;
+        let later = 0;
+
+        for (let i = 0; i < dueDates.length; i++){
+                if (dueDates[i] <= currentDay){
+                        today++;
+                } else if(dueDates[i] - currentDay <= 7){
+                        thisWeek++;
+                } else {
+                        later++;
+                }
+        }
+
+
+        return [today,thisWeek,later]
+
+}
+
+
+console.log(taskTypes([1,2,3,4,5],2));
+
+
+
+
+
+</script>

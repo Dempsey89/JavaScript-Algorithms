@@ -1,0 +1,34 @@
+<script>
+
+
+// Unique Digits
+function uniqueDigits(arr){
+
+        let objComprare = {};
+        let mult;
+
+
+        for (let i = 0; i < arr.length; i++){
+                        let strMult = arr[i].toString().split('');
+                        mult = strMult.length < 2 ? parseInt(strMult) : strMult.reduce((a,b) => {return a * b; });
+                        if (!objComprare.hasOwnProperty(mult)){
+                                objComprare[mult] = mult;
+                        }
+                }
+
+                return Object.keys(objComprare).length; 
+
+}
+
+console.log(uniqueDigits([2,8,121,42,222,23]));
+
+
+
+
+
+
+
+
+
+
+</script>

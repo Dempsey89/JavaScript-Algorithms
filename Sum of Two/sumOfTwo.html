@@ -1,0 +1,28 @@
+<script>
+
+
+// Sum of Two
+function sumOfTwo(arr1,arr2,sum){
+
+        let sums = {};
+
+        for (let i = 0; i < arr1.length; i++){
+                for (let j = 0; j < arr2.length; j++){
+                        let sumKey = arr1[i] + arr2[j];
+                        sums[sumKey] = sumKey;
+                        if(sums.hasOwnProperty(sum)){ return true};
+                }
+        }
+        return false;
+
+}
+
+console.log(sumOfTwo([1,2,3],[10,20,30,40],42));
+
+
+
+
+
+
+
+</script>
